@@ -14,6 +14,16 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Install dependencies 1
+        run : mvn org.apache.maven.plugins:maven-install-plugin:2.5.1:install-file \
+-Dfile=lib/force-wsc-57.0.0-uber.jar \
+-DlocalRepositoryPath=lib
+
+      - name: Install dependencies 2
+        run : mvn org.apache.maven.plugins:maven-install-plugin:2.5.1:install-file \
+-Dfile=lib/opencsv-5.7.1.jar \
+-DlocalRepositoryPath=lib
+
       - uses: actions/checkout@v2
 
       - name: Set up Java version
