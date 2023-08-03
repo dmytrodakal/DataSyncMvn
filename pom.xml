@@ -47,7 +47,7 @@
                 <artifactId>open-csv</artifactId>
                 <version>1.0</version>
                 <packaging>jar</packaging>
-                <file>${project.basedir}/lib/opencsv-5.7.1.jar</file>
+                <file>${project.basedir}/lib/opencsv.jar</file>
             </configuration>
         </execution>
 		        <execution>
@@ -61,7 +61,7 @@
                 <artifactId>sf-api-wsc</artifactId>
                 <version>1.0</version>
                 <packaging>jar</packaging>
-                <file>${project.basedir}/lib/force-wsc-57.0.0-uber.jar</file>
+                <file>${project.basedir}/lib/wsc.jar</file>
             </configuration>
         </execution>
 	</executions>
