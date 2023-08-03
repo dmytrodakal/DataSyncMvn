@@ -24,7 +24,7 @@
     <executions>
         <execution>
             <id>1</id>
-            <phase>validate</phase>
+            <phase>clean</phase>
             <goals>
                 <goal>install-file</goal>
             </goals>
@@ -38,7 +38,7 @@
         </execution>
         <execution>
             <id>2</id>
-            <phase>validate</phase>
+            <phase>clean</phase>
             <goals>
                 <goal>install-file</goal>
             </goals>
@@ -52,7 +52,7 @@
         </execution>
 		        <execution>
             <id>3</id>
-            <phase>validate</phase>
+            <phase>clean</phase>
             <goals>
                 <goal>install-file</goal>
             </goals>
