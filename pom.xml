@@ -13,5 +13,78 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+	
+	<build>
+  <plugins>
+	<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-install-plugin</artifactId>
+    <version>2.5.2</version>
+    <executions>
+        <execution>
+            <id>1</id>
+            <phase>initialize</phase>
+            <goals>
+                <goal>install-file</goal>
+            </goals>
+            <configuration>
+                <groupId>com.local.jar</groupId> 
+                <artifactId>sf-api</artifactId>
+                <version>1.0</version>
+                <packaging>jar</packaging>
+                <file>${project.basedir}/lib/partner.jar</file>
+            </configuration>
+        </execution>
+        <execution>
+            <id>2</id>
+            <phase>initialize</phase>
+            <goals>
+                <goal>install-file</goal>
+            </goals>
+            <configuration>
+                <groupId>com.local.jar</groupId>
+                <artifactId>open-csv</artifactId>
+                <version>1.0</version>
+                <packaging>jar</packaging>
+                <file>${project.basedir}/lib/opencsv-5.7.1.jar</file>
+            </configuration>
+        </execution>
+		        <execution>
+            <id>3</id>
+            <phase>initialize</phase>
+            <goals>
+                <goal>install-file</goal>
+            </goals>
+            <configuration>
+                <groupId>com.local.jar</groupId>
+                <artifactId>sf-api-wsc</artifactId>
+                <version>1.0</version>
+                <packaging>jar</packaging>
+                <file>${project.basedir}/lib/force-wsc-57.0.0-uber.jar</file>
+            </configuration>
+        </execution>
+	</executions>
+	</plugin>
+	  </plugins>
+</build>
+	
+	<dependencies>
+	<dependency>
+		<groupId>com.local.jar</groupId>
+		<artifactId>sf-api</artifactId>
+		<version>1.0</version>
+	</dependency>
 
+	<dependency>
+		<groupId>com.local.jar</groupId>
+		<artifactId>open-csv</artifactId>
+		<version>1.0</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.local.jar</groupId>
+		<artifactId>sf-api-wsc</artifactId>
+		<version>1.0</version>
+	</dependency>
+	</dependencies>
 </project>
